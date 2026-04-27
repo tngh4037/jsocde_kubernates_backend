@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 
 metadata:
-  name: spring-pod
+  name: spring-pod-1
 
 spec:
   containers:
@@ -12,3 +12,32 @@ spec:
         - containerPort: 8080
       imagePullPolicy: IfNotPresent # 이미지 풀 정책 설정
 
+---
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name: spring-pod-2
+
+spec:
+  containers:
+    - name: spring-container
+      image: spring-server # 이전에 Dockerfile 을 통해 빌드한 이미지명
+      ports:
+        - containerPort: 8080
+      imagePullPolicy: IfNotPresent # 이미지 풀 정책 설정
+
+---
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name: spring-pod-3
+
+spec:
+  containers:
+    - name: spring-container
+      image: spring-server # 이전에 Dockerfile 을 통해 빌드한 이미지명
+      ports:
+        - containerPort: 8080
+      imagePullPolicy: IfNotPresent # 이미지 풀 정책 설정
