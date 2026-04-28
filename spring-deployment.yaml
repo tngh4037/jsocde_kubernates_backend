@@ -35,3 +35,13 @@ spec:
                 secretKeyRef:
                   name: spring-secret
                   key: my-password
+            - name: DB_HOST
+              value: mysql-service # Service의 name만 입력하면 다른 서비스와 통신할 수 있다.
+            - name: DB_PORT
+              value: "3306" # 숫자값을 문자로 인식하게 만들기 위해 쌍따옴표 붙여야 한다.
+            - name: DB_NAME
+              value: kub-practice
+            - name: DB_USERNAME
+              value: root
+            - name: DB_PASSWORD
+              value: password123
