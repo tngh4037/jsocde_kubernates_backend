@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+
+metadata:
+  name: spring-config
+
+data: # key: value 설정 값 저장
+  my-account: kim
+  my-password: pwd123

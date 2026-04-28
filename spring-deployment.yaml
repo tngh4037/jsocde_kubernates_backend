@@ -26,6 +26,12 @@ spec:
             - containerPort: 8080
           env:
             - name: MY_ACCOUNT
-              value: kim
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-config # ConfigMap의 이름 (spring-config 라는 이름의 ConfigMap 에서)
+                  key: my-account # ConfigMap에 설정되어 있는 Key값 (my-account 라는 key 에 해당하는 value 로 넣겠다.)
             - name: MY_PASSWORD
-              value: pwd1234
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-config
+                  key: my-password
