@@ -9,7 +9,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: backend-app # 트래픽을 분배할 Pod 정보 ( backend-app 이라는 label 을 가진 Pod 에 트래픽을 분배하겠다. ) | 참고) backend-app 이라는 label 을 가진 Pod 는 spring-deployment.yaml 에 정의해두었다.
+    app: backend-app # 트래픽을 분배할 Pod 정보 ( backend-app 이라는 label 을 가진 Pod 에 연결시켜 트래픽을 분배하겠다. ) | 참고) backend-app 이라는 label 을 가진 Pod 는 spring-deployment.yaml 에 정의해두었다.
   ports:
     - protocol: TCP # 서비스에 접속하기 위한 프로토콜
       port: 8080 # 쿠버네티스 내부에서 Service에 접속하기 위한 포트 번호
