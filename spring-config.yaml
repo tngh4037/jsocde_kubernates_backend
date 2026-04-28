@@ -6,4 +6,4 @@ metadata:
 
 data: # key: value 설정 값 저장
   my-account: kim
-  my-password: pwd123
+  # my-password: pwd123
