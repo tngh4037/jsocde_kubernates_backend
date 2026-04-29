@@ -6,4 +6,7 @@ metadata:
 
 data: # key: value 설정 값 저장
   my-account: kim
-  # my-password: pwd123
+  # my-password: pwd123 # 참고) spring-secret.yml 으로 이동
+  db-host: mysql-service # Service의 name만 입력하면 다른 서비스와 통신할 수 있다.
+  db-port: "3306" # 숫자값을 문자로 인식하게 만들기 위해 쌍따옴표 붙여야 한다.
+  db-name: kub-practice
